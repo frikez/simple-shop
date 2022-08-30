@@ -1,0 +1,6 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <embeddable name="App\Shop\Domain\ValueObject\Money">
+        <field name="amount" column="amount" type="float" />
+        <embedded name="currency" class="App\Shop\Domain\ValueObject\Currency" use-column-prefix="false" />
+    </embeddable>
+</doctrine-mapping>
